@@ -1,7 +1,9 @@
+
 // Imports
 const {classes: Cc, interfaces: Ci, manager: Cm, results: Cr, utils: Cu, Constructor: CC} = Components;
 
 Cu.import('resource://gre/modules/devtools/Console.jsm');
+Cu.import('resource://gre/modules/osfile.jsm');
 Cu.import('resource://gre/modules/Services.jsm');
 Cu.import('resource://gre/modules/XPCOMUtils.jsm');
 
@@ -85,7 +87,7 @@ function extendCore() {
 			// nothing special
 	}
 	
-	console.log('done adding to core, it is now:', core);
+	// console.log('done adding to core, it is now:', core);
 }
 
 // START - Addon Functionalities
@@ -164,7 +166,7 @@ var windowListener = {
 			    type: 'arrow',
 			    noautofocus: true,
 			    level: 'parent',
-			    style: 'width:420px; height:210px;',
+			    style: 'width:440px; height:205px;',
 			    id: 'awesomebar-power-tip_panel'
 			};
 			for (var p in props) {

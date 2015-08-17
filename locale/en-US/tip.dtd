@@ -3,10 +3,10 @@
 
 <!ENTITY awesomebar-power-tip.tip.header 'Filter results on the fly'>
 
-<!ENTITY awesomebar-power-tip.tip.browsing-history '<b>^</b> to search for matches in your <b>browsing history</b>'>
-<!ENTITY awesomebar-power-tip.tip.bookmarks '<b>*</b> to search for matches in your <b>bookmarks</b>'>
-<!ENTITY awesomebar-power-tip.tip.tagged '<b>+</b> to search for matches in pages you&#39;ve <b>tagged</b>'>
-<!ENTITY awesomebar-power-tip.tip.tabs '<b>&#37;</b> to search for matches in your <b>currently open tabs</b>'>
-<!ENTITY awesomebar-power-tip.tip.pages-typed '<b>~</b> to search for matches in <b>pages you&#39;ve typed</b>'>
-<!ENTITY awesomebar-power-tip.tip.page-titles '<b>#</b> to search for matches in <b>page titles</b>'>
-<!ENTITY awesomebar-power-tip.tip.web-addresses '<b>@</b> to search for matches in <b>web addresses</b> (URLs)'>
+<!ENTITY awesomebar-power-tip.tip.browsing-history 'Add <b>^</b> to search for matches in your <b>browsing history</b>'>
+<!ENTITY awesomebar-power-tip.tip.bookmarks 'Add <b>*</b> to search for matches in your <b>bookmarks</b>'>
+<!ENTITY awesomebar-power-tip.tip.tagged 'Add <b>+</b> to search for matches in pages you&#39;ve <b>tagged</b>'>
+<!ENTITY awesomebar-power-tip.tip.tabs 'Add <b>&#37;</b> to search for matches in your <b>currently open tabs</b>'>
+<!ENTITY awesomebar-power-tip.tip.pages-typed 'Add <b>~</b> to search for matches in <b>pages you&#39;ve typed</b>'>
+<!ENTITY awesomebar-power-tip.tip.page-titles 'Add <b>#</b> to search for matches in <b>page titles</b>'>
+<!ENTITY awesomebar-power-tip.tip.web-addresses 'Add <b>@</b> to search for matches in <b>web addresses</b> (URLs)'>
