@@ -2,7 +2,7 @@
 // Imports
 const {classes: Cc, interfaces: Ci, manager: Cm, results: Cr, utils: Cu, Constructor: CC} = Components;
 
-Cu.import('resource://gre/modules/devtools/Console.jsm');
+
 Cu.import('resource://gre/modules/osfile.jsm');
 Cu.import('resource://gre/modules/Services.jsm');
 Cu.import('resource://gre/modules/XPCOMUtils.jsm');
@@ -58,9 +58,9 @@ function extendCore() {
 			
 		case 'darwin':
 			var userAgent = myServices.hph.userAgent;
-			//console.info('userAgent:', userAgent);
+
 			var version_osx = userAgent.match(/Mac OS X 10\.([\d\.]+)/);
-			//console.info('version_osx matched:', version_osx);
+
 			
 			if (!version_osx) {
 				throw new Error('Could not identify Mac OS X version.');
@@ -87,7 +87,7 @@ function extendCore() {
 			// nothing special
 	}
 	
-	// console.log('done adding to core, it is now:', core);
+
 }
 
 // START - Addon Functionalities
@@ -132,7 +132,7 @@ function showTip(aEvent) {
 	
 	if (scrollMaxY > 0) {
 		iframeHeight += 20;
-		console.log(scrollMaxX, scrollMaxY, iframeWidth, iframeHeight);
+
 		iframe.style.width = (scrollMaxX + iframeWidth) + 'px';
 		iframe.style.height = (scrollMaxY + iframeHeight) + 'px';
 		
@@ -210,7 +210,7 @@ var windowListener = {
 			/*
 			iframe.addEventListener('DOMContentLoaded', function() {
 				iframe.removeEventListener('DOMContentLoaded', arguments.callee, false);
-				console.error('height of iframe content:', iframe.contentDocument.body.querySelector('ul').offsetHeight);
+
 			}, false);
 			*/
 			myPanel.appendChild(iframe);
