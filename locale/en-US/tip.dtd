@@ -10,3 +10,4 @@
 <!ENTITY awesomebar-power-tip.tip.pages-typed 'Add <b>~</b> to search for matches in <b>pages you&#39;ve typed</b>'>
 <!ENTITY awesomebar-power-tip.tip.page-titles 'Add <b>#</b> to search for matches in <b>page titles</b>'>
 <!ENTITY awesomebar-power-tip.tip.web-addresses 'Add <b>@</b> to search for matches in <b>web addresses</b> (URLs)'>
+<!ENTITY awesomebar-power-tip.tip.searches 'Add <b>$</b> to search for matches in <b>search history</b>'>

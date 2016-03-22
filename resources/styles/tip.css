@@ -1,3 +1,7 @@
+html {
+	white-space: nowrap;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -20,6 +24,9 @@ li {
 	text-indent: 23px;
 }
 
+li:nth-of-type(8) {
+	background: transparent url("chrome://awesomebar-power-tip/content/resources/images/search.png") no-repeat scroll left center;
+}
 li:nth-of-type(7) {
 	background: transparent url("chrome://awesomebar-power-tip/content/resources/images/history.png") no-repeat scroll left center;
 }

@@ -107,7 +107,38 @@ function showTip(aEvent) {
 	//var timeoutHide = cDOMWindow.setTimeout(cHidePop, 6000);
 	cDOMWindow.gURLBar.addEventListener('blur', cHidePop, false);
 	cDOMWindow.gURLBar.addEventListener('keypress', cHidePop, false);
+	
+	var prefs = {};
+	prefs['browser.urlbar.match.title'] = Services.prefs.getCharPref('browser.urlbar.match.title');
+	prefs['browser.urlbar.match.url'] = Services.prefs.getCharPref('browser.urlbar.match.url');
+	prefs['browser.urlbar.restrict.bookmark'] = Services.prefs.getCharPref('browser.urlbar.restrict.bookmark');
+	prefs['browser.urlbar.restrict.history'] = Services.prefs.getCharPref('browser.urlbar.restrict.history');
+	prefs['browser.urlbar.restrict.openpage'] = Services.prefs.getCharPref('browser.urlbar.restrict.openpage');
+	prefs['browser.urlbar.restrict.searches'] = Services.prefs.getCharPref('browser.urlbar.restrict.searches');
+	prefs['browser.urlbar.restrict.tag'] = Services.prefs.getCharPref('browser.urlbar.restrict.tag');
+	prefs['browser.urlbar.restrict.typed'] = Services.prefs.getCharPref('browser.urlbar.restrict.typed');
 
+	var iframe = popup.getElementsByTagName('iframe')[0];
+	var iframeContentDocument = iframe.contentDocument;
+	for (var p in prefs) {
+		iframeContentDocument.querySelector('li[data-pref="' + p + '"]').querySelector('b').textContent = prefs[p];
+	}
+
+	var iframeWidth = iframe.boxObject.width;
+	var iframeHeight = iframe.boxObject.height;
+	
+	var scrollMaxX = iframe.contentWindow.scrollMaxX;
+	var scrollMaxY = iframe.contentWindow.scrollMaxY;
+	
+	if (scrollMaxY > 0) {
+		iframeHeight += 20;
+		console.log(scrollMaxX, scrollMaxY, iframeWidth, iframeHeight);
+		iframe.style.width = (scrollMaxX + iframeWidth) + 'px';
+		iframe.style.height = (scrollMaxY + iframeHeight) + 'px';
+		
+		popup.style.width = (scrollMaxX + iframeWidth + 40) + 'px';
+		popup.style.height = (scrollMaxY + iframeHeight) + 'px';
+	}
 }
 // END - Addon Functionalities
 /*start - windowlistener*/
@@ -175,7 +206,7 @@ var windowListener = {
 			
 			var iframe = aDOMWindow.document.createElement('iframe');
 			iframe.setAttribute('src', core.addon.path.resources + 'tip.xhtml');
-			iframe.setAttribute('flex', '1');
+			// iframe.setAttribute('flex', '1');
 			/*
 			iframe.addEventListener('DOMContentLoaded', function() {
 				iframe.removeEventListener('DOMContentLoaded', arguments.callee, false);
